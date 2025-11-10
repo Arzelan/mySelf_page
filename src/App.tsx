@@ -378,82 +378,94 @@ const HeroSection = ({
   content: TranslationShape["hero"];
 }) => (
   <SectionWrapper id="home" className="hero-gradient">
-    <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-      <div className="space-y-6">
-        <motion.span
-          className="inline-flex items-center gap-2 rounded-full bg-[color-mix(in_srgb,var(--accent-emerald)_18%,transparent)] px-4 py-2 text-sm font-medium text-[color:var(--accent-emerald)]"
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-        >
-          <span className="h-6 w-6 rounded-full bg-[color-mix(in_srgb,var(--accent-emerald)_22%,transparent)]" />
-          {content.badge}
-        </motion.span>
+    <div className="hero-surface relative overflow-hidden">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="space-y-6">
+          <motion.span
+            className="inline-flex items-center gap-2 rounded-full bg-[color-mix(in_srgb,var(--accent-emerald)_18%,transparent)] px-4 py-2 text-sm font-medium text-[color:var(--accent-emerald)]"
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.6 }}
+          >
+            <span className="h-6 w-6 rounded-full bg-[color-mix(in_srgb,var(--accent-emerald)_22%,transparent)]" />
+            {content.badge}
+          </motion.span>
 
-        <motion.h1
-          className="text-3xl font-semibold leading-tight text-[color:var(--page-foreground)] sm:text-4xl lg:text-5xl"
-          initial="hidden"
-          animate="visible"
-          variants={revealVariant}
-        >
-          {content.title}
-        </motion.h1>
+          <motion.h1
+            className="text-3xl font-semibold leading-tight text-[color:var(--page-foreground)] sm:text-4xl lg:text-5xl"
+            initial="hidden"
+            animate="visible"
+            variants={revealVariant}
+          >
+            {content.title}
+          </motion.h1>
 
-        <motion.p
-          className="text-base leading-relaxed text-muted sm:text-lg"
-          initial="hidden"
-          animate="visible"
-          variants={revealVariant}
-          custom={1}
-        >
-          {content.subtitle}
-        </motion.p>
+          <motion.p
+            className="text-base leading-relaxed text-muted sm:text-lg"
+            initial="hidden"
+            animate="visible"
+            variants={revealVariant}
+            custom={1}
+          >
+            {content.subtitle}
+          </motion.p>
+
+          <motion.div
+            className="flex flex-wrap items-center gap-4"
+            initial="hidden"
+            animate="visible"
+            variants={revealVariant}
+            custom={2}
+          >
+            <motion.a
+              href="#works"
+              className="gradient-border inline-flex items-center gap-2 rounded-full bg-[color:var(--page-foreground)] px-6 py-3 text-sm font-semibold text-[color:var(--page-bg)] transition"
+              whileHover={{ y: -4, scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+              transition={interactiveSpring}
+            >
+              {content.primaryCta}
+              <ArrowUpRight className="h-4 w-4" />
+            </motion.a>
+            <motion.a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-full border border-[color-mix(in_srgb,var(--page-foreground)_20%,transparent)] px-6 py-3 text-sm font-semibold text-[color:var(--page-foreground)] transition"
+              whileHover={{ y: -4, scale: 1.02 }}
+              whileTap={{ scale: 0.97 }}
+              transition={interactiveSpring}
+            >
+              {content.secondaryCta}
+            </motion.a>
+          </motion.div>
+        </div>
 
         <motion.div
-          className="flex flex_wrap items-center gap-4"
-          initial="hidden"
-          animate="visible"
-          variants={revealVariant}
-          custom={2}
+          className="relative"
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
-          <motion.a
-            href="#works"
-            className="gradient-border inline-flex items-center gap-2 rounded-full bg-[color:var(--page-foreground)] px-6 py-3 text-sm font-semibold text-[color:var(--page-bg)] transition"
-            whileHover={{ y: -4, scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
-            transition={interactiveSpring}
-          >
-            {content.primaryCta}
-            <ArrowUpRight className="h-4 w-4" />
-          </motion.a>
-          <motion.a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-[color-mix(in_srgb,var(--page-foreground)_20%,transparent)] px-6 py-3 text-sm font-semibold text-[color:var(--page-foreground)] transition"
-            whileHover={{ y: -4, scale: 1.02 }}
-            whileTap={{ scale: 0.97 }}
-            transition={interactiveSpring}
-          >
-            {content.secondaryCta}
-          </motion.a>
+          <div className="gradient-border overflow-hidden rounded-3xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_70%,var(--glass-overlay))]">
+            <img
+              src={logo}
+              alt="Portfolio preview"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </div>
+          <div className="pointer-events-none absolute inset-0 rounded-3xl border border-[color-mix(in_srgb,var(--page-foreground)_10%,transparent)]" />
         </motion.div>
       </div>
 
-      <motion.div
-        className="relative"
-        initial={{ opacity: 0, scale: 0.96 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-      >
-        <div className="gradient-border overflow-hidden rounded-3xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_70%,var(--glass-overlay))]">
-          <img
-            src={logo}
-            alt="Portfolio preview"
-            className="h-full w-full object-cover"
-            loading="lazy"
-          />
-        </div>
-        <div className="pointer-events-none absolute inset-0 rounded-3xl border border-[color-mix(in_srgb,var(--page-foreground)_10%,transparent)]" />
-      </motion.div>
+      <div className="hero-particles pointer-events-none" aria-hidden="true" />
+      <div className="hero-sparkles pointer-events-none" aria-hidden="true">
+        <span className="hero-sparkle" />
+        <span className="hero-sparkle" />
+        <span className="hero-sparkle" />
+        <span className="hero-sparkle" />
+        <span className="hero-sparkle" />
+        <span className="hero-sparkle" />
+      </div>
     </div>
   </SectionWrapper>
 );

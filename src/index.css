@@ -98,3 +98,97 @@ a {
       transparent 45%
     );
 }
+
+.hero-surface::before {
+  content: "";
+  position: absolute;
+  inset: -25%;
+  background: radial-gradient(
+    circle at 65% 30%,
+    color-mix(in srgb, var(--accent-sky) 38%, transparent) 0%,
+    rgba(15, 23, 42, 0) 60%
+  );
+  filter: blur(70px);
+  opacity: 0.85;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.dark .hero-surface::before {
+  background: radial-gradient(
+    circle at 60% 28%,
+    color-mix(in srgb, var(--accent-sky) 28%, rgba(148, 163, 184, 0.35)) 0%,
+    rgba(2, 6, 23, 0) 62%
+  );
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(148, 163, 184, 0.23) 0, transparent 55%),
+    radial-gradient(circle, rgba(94, 234, 212, 0.18) 0, transparent 40%),
+    radial-gradient(circle, rgba(14, 165, 233, 0.16) 0, transparent 50%);
+  background-size: 28rem 28rem, 22rem 22rem, 34rem 34rem;
+  background-position: 10% -20%, 78% 55%, 40% 80%;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  animation: hero-glide 16s ease-in-out infinite;
+}
+
+@keyframes hero-glide {
+  0% {
+    background-position: 10% -20%, 78% 55%, 40% 80%;
+  }
+  50% {
+    background-position: 16% -12%, 72% 60%, 36% 74%;
+  }
+  100% {
+    background-position: 10% -20%, 78% 55%, 40% 80%;
+  }
+}
+
+.hero-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 0 12px rgba(125, 211, 252, 0.55);
+  animation: sparkle-blink 2.6s ease-in-out infinite;
+}
+
+.hero-sparkle:nth-child(1) { top: 32%; left: 62%; animation-delay: 0s; }
+.hero-sparkle:nth-child(2) { top: 58%; left: 78%; animation-delay: 0.7s; }
+.hero-sparkle:nth-child(3) { top: 70%; left: 48%; animation-delay: 1.4s; }
+.hero-sparkle:nth-child(4) { top: 42%; left: 84%; animation-delay: 1.9s; }
+.hero-sparkle:nth-child(5) { top: 24%; left: 48%; animation-delay: 0.4s; }
+.hero-sparkle:nth-child(6) { top: 64%; left: 66%; animation-delay: 1.1s; }
+
+@keyframes sparkle-blink {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.07);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-particles {
+    animation-duration: 20s;
+    opacity: 0.4;
+  }
+  .hero-sparkle {
+    opacity: 0.75;
+  }
+}
