@@ -1,0 +1,154 @@
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+const resources = {
+  zh: {
+    translation: {
+      nav: {
+        home: "首页",
+        works: "作品",
+        contact: "联系方式",
+        language: "语言",
+        theme: "主题"
+      },
+      themeToggle: {
+        darkLabel: "暗色",
+        lightLabel: "亮色",
+        switchToDark: "切换为暗色主题",
+        switchToLight: "切换为亮色主题"
+      },
+      hero: {
+        badge: "个人导航页",
+        title: "你好，我是陈黎 —— 一个热爱设计与代码的创作者",
+        subtitle: "我把每一个想法打磨成可交互的网页体验。欢迎探索我的作品，并与我联系。",
+        primaryCta: "探索作品",
+        secondaryCta: "联系我"
+      },
+      works: {
+        title: "作品展示",
+        subtitle: "精选的站点集合，涵盖设计、开发与品牌叙事。",
+        items: [
+          {
+            title: "灵感日志 Inspiration Journal",
+            description: "一个记录灵感与创意思考的博客，支持 Markdown 撰写与主题切换。",
+            url: "https://inspiration-journal.example.com",
+            tags: ["博客", "主题切换", "Markdown"]
+          },
+          {
+            title: "旅途地图 Wander Atlas",
+            description: "交互式旅行地图，呈现全球旅行目的地与个性化路线规划。",
+            url: "https://wander-atlas.example.com",
+            tags: ["地图", "可视化", "交互体验"]
+          },
+          {
+            title: "独立工作室 Aster Studio",
+            description: "工作室官网，展示品牌服务、案例与客户评价，支持预约洽谈。",
+            url: "https://aster-studio.example.com",
+            tags: ["品牌官网", "预约", "响应式"]
+          }
+        ]
+      },
+      contact: {
+        title: "联系我",
+        subtitle: "欢迎通过以下方式与我保持联络。",
+        email: {
+          label: "邮箱",
+          value: "hello@chenli.studio"
+        },
+        socials: {
+          label: "社交平台",
+          dribbble: "Dribbble 作品集",
+          github: "GitHub 代码",
+          linkedin: "LinkedIn"
+        }
+      },
+      footer: {
+        rights: "© {{year}} 陈黎. 保留所有权利。"
+      }
+    }
+  },
+  en: {
+    translation: {
+      nav: {
+        home: "Home",
+        works: "Works",
+        contact: "Contact",
+        language: "Language",
+        theme: "Theme"
+      },
+      themeToggle: {
+        darkLabel: "Dark",
+        lightLabel: "Light",
+        switchToDark: "Switch to dark theme",
+        switchToLight: "Switch to light theme"
+      },
+      hero: {
+        badge: "Personal Navigator",
+        title: "Hi, I’m Chen Li — a creator who thrives at the intersection of design and code.",
+        subtitle: "I craft interactive web experiences that transform ideas into reality. Explore my selected works and reach out to collaborate.",
+        primaryCta: "View Projects",
+        secondaryCta: "Get in Touch"
+      },
+      works: {
+        title: "Selected Works",
+        subtitle: "A curated collection that blends storytelling, interaction, and digital craft.",
+        items: [
+          {
+            title: "Inspiration Journal",
+            description: "A thoughtful blog for documenting creative sparks with Markdown support and theme switching.",
+            url: "https://inspiration-journal.example.com",
+            tags: ["Blog", "Theme Switch", "Markdown"]
+          },
+          {
+            title: "Wander Atlas",
+            description: "An interactive travel map that highlights destinations and personal itineraries worldwide.",
+            url: "https://wander-atlas.example.com",
+            tags: ["Map", "Visualization", "Interaction"]
+          },
+          {
+            title: "Aster Studio",
+            description: "A studio site featuring services, case studies, and testimonials with an integrated booking flow.",
+            url: "https://aster-studio.example.com",
+            tags: ["Brand Site", "Booking", "Responsive"]
+          }
+        ]
+      },
+      contact: {
+        title: "Contact",
+        subtitle: "I’d love to connect — here’s how you can reach me.",
+        email: {
+          label: "Email",
+          value: "hello@chenli.studio"
+        },
+        socials: {
+          label: "Social",
+          dribbble: "Dribbble Portfolio",
+          github: "GitHub",
+          linkedin: "LinkedIn"
+        }
+      },
+      footer: {
+        rights: "© {{year}} Chen Li. All rights reserved."
+      }
+    }
+  }
+};
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: "zh",
+    interpolation: {
+      escapeValue: false
+    },
+    detection: {
+      order: ["querystring", "localStorage", "navigator"],
+      caches: ["localStorage"],
+      lookupQuerystring: "lang"
+    }
+  });
+
+export default i18n;
