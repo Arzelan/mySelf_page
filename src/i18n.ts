@@ -105,7 +105,7 @@ const resources = {
       },
       hero: {
         badge: "Personal Navigator",
-        title: "Hi, I’m Star rain — a creator who thrives at the intersection of design and code.",
+        title: "Hi, I’m Star Rain — a creator who thrives at the intersection of design and code.",
         subtitle: "I craft interactive web experiences that transform ideas into reality. Explore my selected works and reach out to collaborate.",
         primaryCta: "View Projects",
         secondaryCta: "Get in Touch"
@@ -167,7 +167,7 @@ const resources = {
         }
       },
       footer: {
-        rights: "© {{year}} Star rain. All rights reserved."
+        rights: "© {{year}} Star Rain. All rights reserved."
       }
     }
   }
