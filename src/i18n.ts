@@ -79,7 +79,7 @@ const resources = {
           label: "社交平台",
           linuxdo: "LinuxDo",
           github: "GitHub 代码",
-          twitter: "Twitter 主页"
+          weibo: "微博主页"
         }
       },
       footer: {
@@ -163,7 +163,7 @@ const resources = {
           label: "Social",
           linuxdo: "LinuxDo",
           github: "GitHub",
-          twitter: "Twitter"
+          weibo: "Weibo"
         }
       },
       footer: {

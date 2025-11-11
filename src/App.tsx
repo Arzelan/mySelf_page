@@ -67,7 +67,7 @@ type TranslationShape = {
       label: string;
       linuxdo: string;
       github: string;
-      twitter: string;
+      weibo: string;
     };
   };
   footer: {
@@ -622,7 +622,7 @@ const ContactSection = ({
               </li>
               <li>
                 <motion.a
-                  href="https://x.com/xn_zhao"
+                  href="https://weibo.com/u/3023723154"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between rounded-2xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_68%,var(--glass-overlay))] px-4 py-3 text-sm font-medium text-[color:var(--page-foreground)] transition"
@@ -630,7 +630,7 @@ const ContactSection = ({
                   whileTap={{ scale: 0.97 }}
                   transition={interactiveSpring}
                 >
-                  {content.socials.twitter}
+                  {content.socials.weibo}
                   <ExternalLink className="h-4 w-4" />
                 </motion.a>
               </li>
