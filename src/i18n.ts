@@ -21,8 +21,8 @@ const resources = {
       },
       hero: {
         badge: "个人导航页",
-        title: "你好，我是陈黎 —— 一个热爱设计与代码的创作者",
-        subtitle: "我把每一个想法打磨成可交互的网页体验。欢迎探索我的作品，并与我联系。",
+        title: "你好，我是星雨 —— 一个热爱代码与AI的创作者",
+        subtitle: "我把每一个想法打磨成可交互的功能体验。欢迎探索我的作品，并与我联系。",
         primaryCta: "探索作品",
         secondaryCta: "联系我"
       },
@@ -73,17 +73,17 @@ const resources = {
         subtitle: "欢迎通过以下方式与我保持联络。",
         email: {
           label: "邮箱",
-          value: "hello@chenli.studio"
+          value: "hello@starrain.vip"
         },
         socials: {
           label: "社交平台",
-          dribbble: "Dribbble 作品集",
+          linuxdo: "LinuxDo",
           github: "GitHub 代码",
-          linkedin: "LinkedIn"
+          twitter: "Twitter 主页"
         }
       },
       footer: {
-        rights: "© {{year}} 陈黎. 保留所有权利。"
+        rights: "© {{year}} 星雨. 保留所有权利。"
       }
     }
   },
@@ -105,7 +105,7 @@ const resources = {
       },
       hero: {
         badge: "Personal Navigator",
-        title: "Hi, I’m Chen Li — a creator who thrives at the intersection of design and code.",
+        title: "Hi, I’m Star rain — a creator who thrives at the intersection of design and code.",
         subtitle: "I craft interactive web experiences that transform ideas into reality. Explore my selected works and reach out to collaborate.",
         primaryCta: "View Projects",
         secondaryCta: "Get in Touch"
@@ -157,17 +157,17 @@ const resources = {
         subtitle: "I’d love to connect — here’s how you can reach me.",
         email: {
           label: "Email",
-          value: "hello@chenli.studio"
+          value: "hello@starrain.vip"
         },
         socials: {
           label: "Social",
-          dribbble: "Dribbble Portfolio",
+          linuxdo: "LinuxDo",
           github: "GitHub",
-          linkedin: "LinkedIn"
+          twitter: "Twitter"
         }
       },
       footer: {
-        rights: "© {{year}} Chen Li. All rights reserved."
+        rights: "© {{year}} Star rain. All rights reserved."
       }
     }
   }

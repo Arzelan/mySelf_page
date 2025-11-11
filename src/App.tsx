@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, useCallback, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { LinksSection } from "./components/LinksSection";
+import { ScrollProgress, FloatingActionButton } from "./components/ScrollComponents";
 import { Globe2, Menu, X, ArrowUpRight, Languages, Mail, ExternalLink, SunMedium, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./i18n";
@@ -64,9 +65,9 @@ type TranslationShape = {
     };
     socials: {
       label: string;
-      dribbble: string;
+      linuxdo: string;
       github: string;
-      linkedin: string;
+      twitter: string;
     };
   };
   footer: {
@@ -593,7 +594,7 @@ const ContactSection = ({
             <ul className="mt-4 space-y-3">
               <li>
                 <motion.a
-                  href="https://dribbble.com/chenli"
+                  href="https://linux.do/u/_12/summary"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between rounded-2xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_68%,var(--glass-overlay))] px-4 py-3 text-sm font-medium text-[color:var(--page-foreground)] transition"
@@ -601,13 +602,13 @@ const ContactSection = ({
                   whileTap={{ scale: 0.97 }}
                   transition={interactiveSpring}
                 >
-                  {content.socials.dribbble}
+                  {content.socials.linuxdo}
                   <ExternalLink className="h-4 w-4" />
                 </motion.a>
               </li>
               <li>
                 <motion.a
-                  href="https://github.com/chenli"
+                  href="https://github.com/Arzelan"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between rounded-2xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_68%,var(--glass-overlay))] px-4 py-3 text-sm font-medium text-[color:var(--page-foreground)] transition"
@@ -621,7 +622,7 @@ const ContactSection = ({
               </li>
               <li>
                 <motion.a
-                  href="https://www.linkedin.com/in/chenli"
+                  href="https://x.com/xn_zhao"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-between rounded-2xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_68%,var(--glass-overlay))] px-4 py-3 text-sm font-medium text-[color:var(--page-foreground)] transition"
@@ -629,7 +630,7 @@ const ContactSection = ({
                   whileTap={{ scale: 0.97 }}
                   transition={interactiveSpring}
                 >
-                  {content.socials.linkedin}
+                  {content.socials.twitter}
                   <ExternalLink className="h-4 w-4" />
                 </motion.a>
               </li>
@@ -648,21 +649,21 @@ const ContactSection = ({
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_color-mix(in_srgb,var(--accent-emerald)_18%,transparent),_transparent_55%)]" />
         <div className="relative space-y-6 p-8">
           <p className="text-sm uppercase tracking-[0.2em] text-[color:var(--page-foreground)]/60">Profile Snapshot</p>
-          <h3 className="text-2xl font-semibold text-[color:var(--page-foreground)]">Chen Li</h3>
+          <h3 className="text-2xl font-semibold text-[color:var(--page-foreground)]">Star rain</h3>
           <p className="text-sm leading-relaxed text-muted">
-            Product designer & front-end developer crafting immersive narratives for digital-first brands. Based in Shanghai, working with teams worldwide.
+            Full-stack engineer & AI large-scale model application development engineer. Based in Beijing, working with teams worldwide.
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_68%,var(--glass-overlay))] p-4">
               <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--page-foreground)]/60">Focus</p>
               <p className="mt-2 text-sm font-medium text-[color:var(--page-foreground)]">
-                Brand design, Interactive storytelling, Design systems
+                Full-stack engineer, AI large-scale model application development engineer
               </p>
             </div>
             <div className="rounded-2xl border border-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] bg-[color-mix(in_srgb,var(--page-bg)_68%,var(--glass-overlay))] p-4">
               <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--page-foreground)]/60">Currently</p>
               <p className="mt-2 text-sm font-medium text-[color:var(--page-foreground)]">
-                Available for collaborations from Jan 2026
+                Available for collaborations and new opportunities
               </p>
             </div>
           </div>
@@ -682,7 +683,7 @@ const Footer = ({ content }: { content: TranslationShape["footer"] }) => (
       <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.2em] text-[color:var(--page-foreground)]/50">
         <span>Design · Code · Narrative</span>
         <span className="hidden h-3 w-px bg-[color-mix(in_srgb,var(--page-foreground)_12%,transparent)] sm:inline" />
-        <span>Shanghai · Remote Ready</span>
+        <span>Beijing · Remote Ready</span>
       </div>
     </div>
   </footer>
@@ -770,6 +771,8 @@ function App() {
         <ContactSection content={strings.contact} />
       </main>
       <Footer content={strings.footer} />
+      <ScrollProgress />
+      <FloatingActionButton />
     </div>
   );
 }

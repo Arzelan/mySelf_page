@@ -13,7 +13,7 @@ export const ScrollProgress: React.FC = () => {
 
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-zinc-700 via-zinc-600 to-zinc-800 origin-left z-50"
+      className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[color:var(--accent-emerald)] to-[color:var(--accent-sky)] origin-left z-50"
       style={{ scaleX }}
     />
   );
@@ -31,7 +31,7 @@ export const FloatingActionButton: React.FC = () => {
 
   return (
     <motion.button
-      className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-zinc-700 to-zinc-800 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 hover:-translate-y-0.5 active:scale-95 flex items-center justify-center z-40 backdrop-blur-sm border border-white/20 transition-all duration-200 cursor-pointer"
+      className="fixed bottom-8 right-8 w-14 h-14 bg-[color:var(--page-foreground)] text-[color:var(--page-bg)] rounded-full shadow-lg hover:shadow-xl hover:scale-110 hover:-translate-y-0.5 active:scale-95 flex items-center justify-center z-40 backdrop-blur-sm border border-[color:var(--card-border)] transition-all duration-200 cursor-pointer"
       style={{ opacity, scale }}
       onClick={scrollToTop}
       initial={{ opacity: 0, scale: 0.8 }}

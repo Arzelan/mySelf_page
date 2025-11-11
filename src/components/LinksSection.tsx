@@ -31,7 +31,7 @@ const linkDetails = [
   },
 ];
 
-const placeholderLinks = ["#blog", "#cloud", "#toolbox"];
+const placeholderLinks = ["https://blog.starrain.vip/", "#cloud", "#toolbox"];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
