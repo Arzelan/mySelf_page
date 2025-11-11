@@ -23,7 +23,7 @@ const resources = {
         badge: "个人导航页",
         title: "你好，我是星雨 —— 一个热爱代码与AI的创作者",
         subtitle: "我把每一个想法打磨成可交互的功能体验。欢迎探索我的作品，并与我联系。",
-        primaryCta: "探索作品",
+        primaryCta: "我的链接",
         secondaryCta: "联系我"
       },
       works: {
@@ -107,7 +107,7 @@ const resources = {
         badge: "Personal Navigator",
         title: "Hi, I’m Star Rain — a creator who thrives at the intersection of design and code.",
         subtitle: "I craft interactive web experiences that transform ideas into reality. Explore my selected works and reach out to collaborate.",
-        primaryCta: "View Projects",
+        primaryCta: "My Links",
         secondaryCta: "Get in Touch"
       },
       works: {

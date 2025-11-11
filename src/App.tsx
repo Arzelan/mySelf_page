@@ -430,7 +430,7 @@ const HeroSection = ({
             custom={2}
           >
             <motion.a
-              href="#works"
+              href="#links"
               className="gradient-border inline-flex items-center gap-2 rounded-full bg-[color:var(--page-foreground)] px-6 py-3 text-sm font-semibold text-[color:var(--page-bg)] transition"
               whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
