@@ -83,7 +83,7 @@ const resources = {
         }
       },
       footer: {
-        rights: "© {{year}} 星雨. 保留所有权利。"
+        rights: "© {{year}} 星雨. 保留所有权利。京ICP备2024094132号-1"
       }
     }
   },
@@ -167,7 +167,7 @@ const resources = {
         }
       },
       footer: {
-        rights: "© {{year}} Star Rain. All rights reserved."
+        rights: "© {{year}} Star Rain. All rights reserved. 京ICP备2024094132号-1"
       }
     }
   }
