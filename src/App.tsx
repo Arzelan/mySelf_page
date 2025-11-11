@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState, useCallback, type ReactNode } from "react";
 import { useTranslation } from "react-i18next";
+import { LinksSection } from "./components/LinksSection";
 import { Globe2, Menu, X, ArrowUpRight, Languages, Mail, ExternalLink, SunMedium, Moon } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import "./i18n";
@@ -23,6 +24,7 @@ type TranslationShape = {
   nav: {
     home: string;
     works: string;
+    links: string;
     contact: string;
     language: string;
     theme: string;
@@ -44,6 +46,14 @@ type TranslationShape = {
     title: string;
     subtitle: string;
     items: WorkItem[];
+  };
+  links: {
+    title: string;
+    subtitle: string;
+    items: {
+      title: string;
+      description: string;
+    }[];
   };
   contact: {
     title: string;
@@ -67,6 +77,7 @@ type TranslationShape = {
 const navLinks = [
   { id: "home" },
   { id: "works" },
+  { id: "links" },
   { id: "contact" },
 ] as const;
 
@@ -714,6 +725,7 @@ function App() {
       themeToggle: t("themeToggle", { returnObjects: true }),
       hero: t("hero", { returnObjects: true }),
       works: t("works", { returnObjects: true }),
+      links: t("links", { returnObjects: true }),
       contact: t("contact", { returnObjects: true }),
       footer: t("footer", { returnObjects: true }),
     }),
@@ -752,6 +764,9 @@ function App() {
       <main className="flex flex-col gap-16 pt-32 transition-colors duration-300">
         <HeroSection content={strings.hero} />
         <WorksSection content={strings.works} />
+        <SectionWrapper id="links">
+          <LinksSection content={strings.links} />
+        </SectionWrapper>
         <ContactSection content={strings.contact} />
       </main>
       <Footer content={strings.footer} />

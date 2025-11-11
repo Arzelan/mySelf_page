@@ -8,6 +8,7 @@ const resources = {
       nav: {
         home: "首页",
         works: "作品",
+        links: "我的链接",
         contact: "联系方式",
         language: "语言",
         theme: "主题"
@@ -49,6 +50,24 @@ const resources = {
           }
         ]
       },
+      links: {
+        title: "我的链接",
+        subtitle: "探索我的数字世界，从代码到思想。",
+        items: [
+          {
+            title: "我的博客",
+            description: "记录知识与生活"
+          },
+          {
+            title: "我的网盘",
+            description: "文件与资源分享"
+          },
+          {
+            title: "工具站",
+            description: "高效的在线工具"
+          }
+        ]
+      },
       contact: {
         title: "联系我",
         subtitle: "欢迎通过以下方式与我保持联络。",
@@ -73,6 +92,7 @@ const resources = {
       nav: {
         home: "Home",
         works: "Works",
+        links: "Links",
         contact: "Contact",
         language: "Language",
         theme: "Theme"
@@ -111,6 +131,24 @@ const resources = {
             description: "A studio site featuring services, case studies, and testimonials with an integrated booking flow.",
             url: "https://aster-studio.example.com",
             tags: ["Brand Site", "Booking", "Responsive"]
+          }
+        ]
+      },
+      links: {
+        title: "My Links",
+        subtitle: "Explore my digital world, from code to ideas.",
+        items: [
+          {
+            title: "My Blog",
+            description: "Knowledge and life records"
+          },
+          {
+            title: "My Cloud Drive",
+            description: "File and resource sharing"
+          },
+          {
+            title: "Toolbox",
+            description: "Efficient online tools"
           }
         ]
       },
