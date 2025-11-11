@@ -77,7 +77,7 @@ type TranslationShape = {
 
 const navLinks = [
   { id: "home" },
-  { id: "works" },
+  // { id: "works" },
   { id: "links" },
   { id: "contact" },
 ] as const;
@@ -182,7 +182,7 @@ const Header = ({
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[color-mix(in_srgb,var(--page-foreground)_10%,transparent)] text-[color:var(--page-foreground)]">
               <Globe2 className="h-4 w-4" />
             </span>
-            <span>Chen Li Studio</span>
+            <span>Star Rain Studio</span>
           </motion.a>
 
           <nav className="hidden items-center gap-6 lg:flex">
@@ -764,7 +764,7 @@ function App() {
       />
       <main className="flex flex-col gap-16 pt-32 transition-colors duration-300">
         <HeroSection content={strings.hero} />
-        <WorksSection content={strings.works} />
+        {/* <WorksSection content={strings.works} /> */}
         <SectionWrapper id="links">
           <LinksSection content={strings.links} />
         </SectionWrapper>
